@@ -1,0 +1,37 @@
+<div class="seven">
+
+    <div class="feed" id="feed">
+        <h2 class="titleseven cursive">Whats New?</h2>
+        <div class="feed-posts">
+            <ul class="posts">
+                   {{#each users as |user|}}
+                <div class="item-feed">
+                    <div class="sentc"> {{User.username}} added {{user.name}} to their wishlist!</div>
+                    <div class="post-date">{{user.date_created}}</div>
+                    <div class="post-cost"><a href="{{user.url}}">Link</a></div>
+                </div>
+            {{/each}}
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="three">
+    <div class="friendslist" id="friendslist">
+        <ul>
+            {{#each users as |user|}}
+            <button class="friend" id="friend">
+                <a href="/{{User.username}}">
+                <div class="displaypic"><i class="fa-regular fa-circle-user fa-4x"></i></div>
+                <div class="fname">{{User.username}}</div>
+                <div class="flistlength fpop">{{user.length}}</div>
+                {{!-- <div class="Bday fpop"><i class="fa-solid fa-cake-candles"></i> : 02/02/02</div> --}}
+                </a>
+            </button>
+            {{/each}}
+ 
+
+        </ul>
+    </div>
+</div>
